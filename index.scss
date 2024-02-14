@@ -60,8 +60,9 @@ body {
 	left: 0;
 	top: 0;
 	z-index: -1000;
+}
 
-div {
+.fond>div {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -70,7 +71,7 @@ div {
 	background: linear-gradient(to right, var(--color-one), var(--color-two) 100%);
 }
 
-div:nth-child(2) {
+.fond>div:nth-child(2) {
 	background: linear-gradient(to right, var(--color-two), var(--color-one) 100%);
 	-webkit-animation-name: animationOne;
 	animation-name: animationOne;
@@ -86,7 +87,7 @@ div:nth-child(2) {
 
 }
 
-div:nth-child(3) {
+.fond>div:nth-child(3) {
 	background: linear-gradient(to top, transparent, var(--color-two) 100%);
 	-webkit-animation-name: animationTwo;
 	animation-name: animationTwo;
@@ -98,7 +99,6 @@ div:nth-child(3) {
 	animation-timing-function: ease;
 	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
-}
 }
 
 @-webkit-keyframes animationOne {

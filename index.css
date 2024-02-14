@@ -60,7 +60,8 @@ body {
   top: 0;
   z-index: -1000;
 }
-.fond div {
+
+.fond > div {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -68,7 +69,8 @@ body {
   top: 0;
   background: linear-gradient(to right, var(--color-one), var(--color-two) 100%);
 }
-.fond div:nth-child(2) {
+
+.fond > div:nth-child(2) {
   background: linear-gradient(to right, var(--color-two), var(--color-one) 100%);
   animation-name: animationOne;
   animation-duration: 8s;
@@ -76,7 +78,8 @@ body {
   animation-timing-function: ease;
   animation-iteration-count: infinite;
 }
-.fond div:nth-child(3) {
+
+.fond > div:nth-child(3) {
   background: linear-gradient(to top, transparent, var(--color-two) 100%);
   animation-name: animationTwo;
   animation-duration: 8s;
@@ -116,7 +119,8 @@ body {
   backdrop-filter: blur(0.3125rem);
   -webkit-backdrop-filter: blur(0.3125rem);
 }
-.effetverre :before {
+
+.effetverre:before {
   content: "";
   z-index: -8000;
   width: 100%;
@@ -148,6 +152,7 @@ body {
   backdrop-filter: blur(0.4rem);
   -webkit-backdrop-filter: blur(0.4rem);
 }
+
 .drop p.title {
   flex: 1 0 auto;
   text-align: center;
@@ -157,7 +162,8 @@ body {
   margin: 0;
   margin-left: -50px;
 }
-.drop :hover {
+
+.drop:hover {
   box-shadow: 0.5rem 1.5rem 1.5rem hsla(0, 0%, 0%, 0.25);
 }
 
@@ -181,12 +187,14 @@ header {
   top: 2.8125rem;
   z-index: 100000;
 }
+
 .menu div.burger {
   position: relative;
   display: block;
   height: 4.375rem;
   width: 4.375rem;
 }
+
 .menu div.burger span {
   background-color: black;
   display: block;
@@ -197,15 +205,19 @@ header {
   border-radius: 1.25rem;
   transition: 0.25s all ease-out;
 }
+
 .menu div.burger span:nth-child(1) {
   top: 0rem;
 }
+
 .menu div.burger span:nth-child(2) {
   top: 1.25rem;
 }
+
 .menu div.burger span:nth-child(3) {
   top: 2.5rem;
 }
+
 .menu ul.menulist {
   position: absolute;
   top: 100%;
@@ -218,17 +230,21 @@ header {
   opacity: 0;
   transition: max-height 0s ease-out 0.5s, opacity 0.5s, padding 0.5s;
 }
+
 .menu ul.menulist li {
   font-size: 1.875rem;
   text-align: center;
 }
+
 .menu ul.menulist li a {
   text-decoration: none;
   color: black;
 }
+
 .menu ul.menulist li a:hover {
   color: var(--color-3);
 }
+
 .menu ul.menulist span {
   display: block;
   width: 90%;
@@ -237,24 +253,29 @@ header {
   margin: 5%;
   background: black;
 }
-.menu :hover ul.menulist {
+
+.menu:hover ul.menulist {
   padding-top: 0.625rem;
   max-height: 18.75rem;
   opacity: 1;
   transition: max-height 0s ease-out 0s, opacity 0.5s, padding 0.5s;
 }
-.menu :hover div.burger span {
+
+.menu:hover div.burger span {
   top: 1.25rem;
   box-shadow: none;
   transition: 0.25s all ease-out;
 }
-.menu :hover div.burger span :nth-child(1) {
+
+.menu:hover div.burger span:nth-child(1) {
   transform: rotate(45deg);
 }
-.menu :hover div.burger span :nth-child(2) {
+
+.menu:hover div.burger span:nth-child(2) {
   transform: rotate(-45deg);
 }
-.menu :hover div.burger span :nth-child(3) {
+
+.menu:hover div.burger span:nth-child(3) {
   transform: rotate(45deg);
 }
 
@@ -272,12 +293,6 @@ header {
   background: none;
 }
 
-.titre {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 main {
   flex: 1 0 auto;
   display: block;
@@ -286,17 +301,27 @@ main {
   left: 10%;
   width: 80%;
 }
-main div {
+
+.titre {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main > div {
   width: 100%;
 }
-main div .main-division {
+
+main div.main-division {
   padding: 1.25rem;
 }
-main div .rowcontainer {
+
+main div.rowcontainer {
   display: flex;
   flex-direction: row;
 }
-main div .rowlist {
+
+main div.rowlist {
   scroll-behavior: auto !important;
   display: flex;
   flex-direction: row;
@@ -304,34 +329,45 @@ main div .rowlist {
   flex-wrap: nowrap;
   height: auto;
 }
-main div .columncontainer {
+
+main div.columncontainer {
   display: flex;
   flex-direction: column;
 }
-main div .text-article {
+
+main div.text-article {
   flex: 1 1 auto;
   margin-top: -0.625rem;
   display: flex;
   flex-direction: row;
 }
-main div .text-article2 {
+
+main div.text-article2 {
   height: 100%;
   flex: 1 1 auto;
   margin-top: -0.625rem;
   display: flex;
   flex-direction: column;
 }
-main div .sized-div {
+
+.iso {
+  width: 25%;
+  height: auto;
+}
+
+main div.sized-div {
   flex: 0 0 auto;
 }
-main div .block {
+
+main div.block {
   display: block;
   width: 6.25rem;
   height: 6.25rem;
   border-radius: 0.3125rem;
   margin: 0.625rem;
 }
-main div .progressblock {
+
+main div.progressblock {
   display: inline-block;
   width: 8.4375rem;
   height: 9.375rem;
@@ -342,11 +378,6 @@ main div .progressblock {
   margin-bottom: 0.625rem;
   overflow: hidden;
   transition: 0.5s all ease-out;
-}
-
-.iso {
-  width: 25%;
-  height: auto;
 }
 
 /*Boutons*/
@@ -375,7 +406,8 @@ button {
   margin-bottom: 25px;
   box-shadow: 0.45rem 0.55rem 0.65rem hsla(0, 0%, 0%, 0.35);
 }
-button :hover {
+
+button:hover {
   box-shadow: 0.35rem 0.55rem 0.55rem hsla(0, 0%, 0%, 0.45);
   background: linear-gradient(to bottom left, var(--color-3), #00a656);
 }
@@ -421,6 +453,7 @@ main div.progressblock span.roundelem {
   flex: 0 1 auto;
   margin: auto;
 }
+
 main div.progressblock span.roundelem1 {
   display: block;
   position: relative;
@@ -429,6 +462,7 @@ main div.progressblock span.roundelem1 {
   flex: 0 1 auto;
   margin: auto;
 }
+
 main div.progressblock span.roundelem2 {
   display: block;
   position: relative;
@@ -437,6 +471,7 @@ main div.progressblock span.roundelem2 {
   flex: 0 1 auto;
   margin: auto;
 }
+
 main div.progressblock span.roundelem3 {
   display: block;
   position: relative;
@@ -445,6 +480,7 @@ main div.progressblock span.roundelem3 {
   flex: 0 1 auto;
   margin: auto;
 }
+
 main div.progressblock span.roundelem4 {
   display: block;
   position: relative;
@@ -453,6 +489,7 @@ main div.progressblock span.roundelem4 {
   flex: 0 1 auto;
   margin: auto;
 }
+
 main div.progressblock span.roundelem5 {
   display: block;
   position: relative;
@@ -461,6 +498,7 @@ main div.progressblock span.roundelem5 {
   flex: 0 1 auto;
   margin: auto;
 }
+
 main div.progressblock span.roundelem6 {
   display: block;
   position: relative;
@@ -469,17 +507,20 @@ main div.progressblock span.roundelem6 {
   flex: 0 1 auto;
   margin: auto;
 }
+
 main div.progressblock p.progresstitle1 {
   width: 100%;
   margin-top: 0.5rem;
   text-align: center;
   font-weight: bold;
 }
+
 main div.progressblock p.progresstitle {
   width: 100%;
   text-align: center;
   font-weight: bold;
 }
+
 main div.progressblock p.progressdescription {
   margin: 0%;
   opacity: 0;
@@ -487,33 +528,38 @@ main div.progressblock p.progressdescription {
   font-size: 0.9rem;
   transition: 0.5s all ease-out;
 }
-main div.progressblock :hover {
+
+main div.progressblock:hover {
   height: 15rem;
   margin-bottom: 0.625rem;
   transition: 0.5s all ease-out;
 }
 
-main div .progressblock1:hover {
+main div.progressblock1:hover {
   height: 18.8rem;
   margin-bottom: 0.625rem;
   transition: 0.5s all ease-out;
 }
-main div .progressblock2:hover {
+
+main div.progressblock2:hover {
   height: 17.5rem;
   margin-bottom: 0.625rem;
   transition: 0.5s all ease-out;
 }
-main div .progressblock3:hover {
+
+main div.progressblock3:hover {
   height: 14.5rem;
   margin-bottom: 0.625rem;
   transition: 0.5s all ease-out;
 }
-main div .progressblock4:hover {
+
+main div.progressblock4:hover {
   height: 22rem;
   margin-bottom: 0.625rem;
   transition: 0.5s all ease-out;
 }
-main div .progressblock:hover p.progressdescription {
+
+main div.progressblock:hover p.progressdescription {
   margin-top: -0.3125rem;
   margin: 0%;
   line-height: 1.2;
@@ -543,12 +589,14 @@ main div.difarticles {
   flex-wrap: nowrap;
   overflow: hidden;
 }
+
 main div.difarticles div.text-article {
   scroll-behavior: auto !important;
   flex: 0 0 auto;
   width: 100%;
   overflow: auto;
 }
+
 main div.difarticles div.text-article2 {
   scroll-behavior: auto !important;
   flex: 0 0 auto;

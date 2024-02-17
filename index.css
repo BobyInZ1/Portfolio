@@ -227,10 +227,6 @@ header {
 
 
 /*menu burger*/
-.text-présentation{
-	display: flex;
-	align-content: space-around;
-}
 
 .menu {
 	height: 3.75rem;

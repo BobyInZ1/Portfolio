@@ -2,89 +2,116 @@
 $color_2: black;
 $color_3: #000000;
 $font-family_1: 'PT Sans Caption', sans-serif;
-$font-family_2: 'Gatwick Bold';
 $background-color_1: black;
+
+@font-face {
+	font-family: 'gatwick';
+	src:url('/font/gatwick-medium-webfont.woff') format('woff'),
+		url('/font/gatwick-medium-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+
+}
 
 /*Background*/
 @-webkit-keyframes animationOne {
 	0% {
 		opacity: 0;
 	}
+
 	50% {
 		opacity: 1;
 	}
+
 	100% {
 		opacity: 0;
 	}
 }
+
 @keyframes animationOne {
 	0% {
 		opacity: 0;
 	}
+
 	50% {
 		opacity: 1;
 	}
+
 	100% {
 		opacity: 0;
 	}
 }
+
 @-webkit-keyframes animationTwo {
 	0% {
 		opacity: 0;
 	}
+
 	50% {
 		opacity: 1;
 	}
+
 	100% {
 		opacity: 0;
 	}
 }
+
 @keyframes animationTwo {
 	0% {
 		opacity: 0;
 	}
+
 	50% {
 		opacity: 1;
 	}
+
 	100% {
 		opacity: 0;
 	}
 }
+
 @-webkit-keyframes fadein {
 	from {
 		bottom: 0;
 		opacity: 0;
 	}
+
 	to {
 		bottom: 80px;
 		opacity: 1;
 	}
 }
+
 @keyframes fadein {
 	from {
 		bottom: 0;
 		opacity: 0;
 	}
+
 	to {
 		bottom: 80px;
 		opacity: 1;
 	}
 }
+
 @-webkit-keyframes fadeout {
 	from {
 		bottom: 80px;
 		opacity: 1;
 	}
+
 	to {
 		bottom: 0;
 		opacity: 0;
 	}
 }
+
 @keyframes fadeout {
 	from {
 		bottom: 80px;
 		opacity: 1;
 	}
+
 	to {
 		bottom: 0;
 		opacity: 0;
@@ -98,6 +125,7 @@ $background-color_1: black;
 	left: 0;
 	top: 0;
 	z-index: -1000;
+
 	>div {
 		width: 100%;
 		height: 100%;
@@ -105,6 +133,7 @@ $background-color_1: black;
 		left: 0;
 		top: 0;
 		background: linear-gradient(to right, var(--color-one), var(--color-two) 100%);
+
 		&:nth-child(2) {
 			background: linear-gradient(to right, var(--color-two), var(--color-one) 100%);
 			-webkit-animation-name: animationOne;
@@ -118,6 +147,7 @@ $background-color_1: black;
 			-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
 		}
+
 		&:nth-child(3) {
 			background: linear-gradient(to top, transparent, var(--color-two) 100%);
 			-webkit-animation-name: animationTwo;
@@ -177,9 +207,10 @@ body {
 }
 
 .lelien {
-display: flex;
-align-items: center;
-gap: 1rem;
+	margin-left: 50px;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 }
 
 .moi {
@@ -198,6 +229,7 @@ gap: 1rem;
 	border: 0.0625rem solid rgba(255, 255, 255, 0.223);
 	backdrop-filter: blur(0.3125rem);
 	-webkit-backdrop-filter: blur(0.3125rem);
+
 	&:before {
 		content: "";
 		z-index: -8000;
@@ -212,6 +244,7 @@ gap: 1rem;
 		padding: 0;
 	}
 }
+
 .drop {
 	display: flex;
 	flex-direction: row;
@@ -228,15 +261,17 @@ gap: 1rem;
 	border: 0.0625rem solid rgba(255, 255, 255, 0.223);
 	backdrop-filter: blur(0.4rem);
 	-webkit-backdrop-filter: blur(0.4rem);
+
 	p.title {
 		flex: 1 0 auto;
 		text-align: center;
-		font-family: $font-family_2;
-		font-size: 3.125rem;
+		font-family: 'gatwick';
+		font-size: 2.8rem;
 		padding: 0;
 		margin: 0;
 		margin-left: -50px;
 	}
+
 	&:hover {
 		box-shadow: 0.5rem 1.5rem 1.5rem hsl(0deg 0% 0% / 0.25);
 	}
@@ -262,11 +297,13 @@ header {
 	right: 12%;
 	top: 2.8125rem;
 	z-index: 100000;
+
 	div.burger {
 		position: relative;
 		display: block;
 		height: 4.375rem;
 		width: 4.375rem;
+
 		span {
 			background-color: $background-color_1;
 			display: block;
@@ -276,17 +313,21 @@ header {
 			height: 0.625rem;
 			border-radius: 1.25rem;
 			transition: 0.25s all ease-out;
+
 			&:nth-child(1) {
 				top: 0rem;
 			}
+
 			&:nth-child(2) {
 				top: 1.25rem;
 			}
+
 			&:nth-child(3) {
 				top: 2.5rem;
 			}
 		}
 	}
+
 	ul.menulist {
 		position: absolute;
 		top: 100%;
@@ -298,19 +339,23 @@ header {
 		overflow: hidden;
 		opacity: 0;
 		transition: max-height 0s ease-out 0.5s, opacity 0.5s, padding 0.5s;
+
 		li {
 			font-size: 1.875rem;
 			text-align: center;
+
 			a {
 				transition: color .3s;
 				text-decoration: none;
 				color: $color_2;
+
 				&:hover {
 					transition: color .3s;
 					color: var(--color-3);
 				}
 			}
 		}
+
 		span {
 			display: block;
 			width: 90%;
@@ -320,6 +365,7 @@ header {
 			background: black;
 		}
 	}
+
 	&:hover {
 		ul.menulist {
 			padding-top: 0.625rem;
@@ -327,17 +373,21 @@ header {
 			opacity: 1;
 			transition: max-height 0s ease-out 0s, opacity 0.5s, padding 0.5s;
 		}
+
 		div.burger {
 			span {
 				top: 1.25rem;
 				box-shadow: none;
 				transition: 0.25s all ease-out;
+
 				&:nth-child(1) {
 					transform: rotate(45deg);
 				}
+
 				&:nth-child(2) {
 					transform: rotate(-45deg);
 				}
+
 				&:nth-child(3) {
 					transform: rotate(45deg);
 				}
@@ -359,6 +409,7 @@ header {
 	overflow: auto;
 	background: none;
 }
+
 main {
 	flex: 1 0 auto;
 	display: block;
@@ -370,10 +421,12 @@ main {
 	div.main-division {
 		padding: 1.25rem;
 	}
+
 	div.rowcontainer {
 		display: flex;
 		flex-direction: row;
 	}
+
 	div.rowlist {
 		scroll-behavior: auto !important;
 		display: flex;
@@ -382,16 +435,19 @@ main {
 		flex-wrap: wrap;
 		height: auto;
 	}
+
 	div.columncontainer {
 		display: flex;
 		flex-direction: column;
 	}
+
 	div.text-article {
 		flex: 1 1 auto;
 		margin-top: -0.625rem;
 		display: flex;
 		flex-direction: row;
 	}
+
 	div.text-article2 {
 		height: 100%;
 		flex: 1 1 auto;
@@ -399,9 +455,11 @@ main {
 		display: flex;
 		flex-direction: column;
 	}
+
 	div.sized-div {
 		flex: 0 0 auto;
 	}
+
 	div.block {
 		display: block;
 		width: 6.25rem;
@@ -409,6 +467,7 @@ main {
 		border-radius: 0.3125rem;
 		margin: 0.625rem;
 	}
+
 	div.progressblock {
 		display: inline-block;
 		width: 8.4375rem;
@@ -420,6 +479,7 @@ main {
 		margin-bottom: 0.625rem;
 		overflow: hidden;
 		transition: 0.5s all ease-out;
+
 		span.roundelem {
 			display: block;
 			position: relative;
@@ -428,6 +488,7 @@ main {
 			flex: 0 1 auto;
 			margin: auto;
 		}
+
 		span.roundelem1 {
 			display: block;
 			position: relative;
@@ -436,6 +497,7 @@ main {
 			flex: 0 1 auto;
 			margin: auto;
 		}
+
 		span.roundelem2 {
 			display: block;
 			position: relative;
@@ -444,6 +506,7 @@ main {
 			flex: 0 1 auto;
 			margin: auto;
 		}
+
 		span.roundelem3 {
 			display: block;
 			position: relative;
@@ -452,6 +515,7 @@ main {
 			flex: 0 1 auto;
 			margin: auto;
 		}
+
 		span.roundelem4 {
 			display: block;
 			position: relative;
@@ -460,6 +524,7 @@ main {
 			flex: 0 1 auto;
 			margin: auto;
 		}
+
 		span.roundelem5 {
 			display: block;
 			position: relative;
@@ -468,6 +533,7 @@ main {
 			flex: 0 1 auto;
 			margin: auto;
 		}
+
 		span.roundelem6 {
 			display: block;
 			position: relative;
@@ -476,17 +542,20 @@ main {
 			flex: 0 1 auto;
 			margin: auto;
 		}
+
 		p.progresstitle1 {
 			width: 100%;
 			margin-top: 0.5rem;
 			text-align: center;
 			font-weight: bold;
 		}
+
 		p.progresstitle {
 			width: 100%;
 			text-align: center;
 			font-weight: bold;
 		}
+
 		p.progressdescription {
 			margin: 0%;
 			opacity: 0;
@@ -494,10 +563,12 @@ main {
 			font-size: 0.9rem;
 			transition: 0.5s all ease-out;
 		}
+
 		&:hover {
 			height: 15rem;
 			margin-bottom: 0.625rem;
 			transition: 0.5s all ease-out;
+
 			p.progressdescription {
 				margin-top: -0.3125rem;
 				margin: 0%;
@@ -507,6 +578,7 @@ main {
 			}
 		}
 	}
+
 	div.progressblock1 {
 		&:hover {
 			height: 18.8rem;
@@ -514,6 +586,7 @@ main {
 			transition: 0.5s all ease-out;
 		}
 	}
+
 	div.progressblock2 {
 		&:hover {
 			height: 17.5rem;
@@ -521,6 +594,7 @@ main {
 			transition: 0.5s all ease-out;
 		}
 	}
+
 	div.progressblock3 {
 		&:hover {
 			height: 14.5rem;
@@ -528,6 +602,7 @@ main {
 			transition: 0.5s all ease-out;
 		}
 	}
+
 	div.progressblock4 {
 		&:hover {
 			height: 22rem;
@@ -535,6 +610,7 @@ main {
 			transition: 0.5s all ease-out;
 		}
 	}
+
 	div.difarticles {
 		margin-bottom: -80px;
 		scroll-behavior: auto !important;
@@ -543,12 +619,14 @@ main {
 		width: 100%;
 		flex-wrap: nowrap;
 		overflow: hidden;
+
 		div.text-article {
 			scroll-behavior: auto !important;
 			flex: 0 0 auto;
 			width: 100%;
 			overflow: auto;
 		}
+
 		div.text-article2 {
 			scroll-behavior: auto !important;
 			flex: 0 0 auto;
@@ -562,6 +640,7 @@ main {
 		position: relative;
 		width: 100%;
 		height: auto;
+
 		&:before {
 			content: "";
 			position: absolute;
@@ -574,16 +653,19 @@ main {
 			border-radius: 40px;
 		}
 	}
+
 	div.timeline-element {
 		position: relative;
 		display: block;
 		width: 100%;
 		padding-bottom: 200px;
+
 		p {
 			width: calc(50% - 6.25rem);
 			padding: 1.25rem;
 			background: var(--color-3);
 			border-radius: 1.25rem;
+
 			&:before {
 				content: "";
 				display: block;
@@ -603,33 +685,40 @@ main {
 			}
 		}
 	}
+
 	div.timeline-element2 {
 		position: relative;
 		display: block;
 		width: 100%;
 		padding-bottom: 10px;
 	}
+
 	div.timeline-left {
 		right: 0;
+
 		p {
 			position: absolute;
 			display: flex;
 			left: 0rem;
 			justify-content: center;
 			flex-direction: column;
+
 			&:before {
 				right: -5.3125rem;
 			}
 		}
 	}
+
 	div.timeline-right {
 		left: 0;
+
 		p {
 			position: absolute;
 			display: flex;
 			right: 0rem;
 			justify-content: center;
 			flex-direction: column;
+
 			&:before {
 				left: -5.3125rem;
 			}
@@ -642,6 +731,7 @@ main {
 	display: flex;
 	justify-content: center;
 }
+
 .iso {
 	width: 25%;
 	height: auto;
@@ -654,6 +744,7 @@ a {
 	text-decoration: none;
 	color: $color_3;
 }
+
 button {
 	transition: color .3s;
 	display: flex;
@@ -674,6 +765,7 @@ button {
 	margin-right: 1.25rem;
 	margin-bottom: 25px;
 	box-shadow: 0.45rem 0.55rem 0.65rem hsl(0deg 0% 0% / 0.35);
+
 	&:hover {
 		box-shadow: 0.35rem 0.55rem 0.55rem hsl(0deg 0% 0% / 0.45);
 		background: linear-gradient(to bottom left, var(--color-3), #00a656);
@@ -690,6 +782,7 @@ button {
 	width: 100px;
 	height: auto;
 }
+
 .logoimg {
 	justify-self: center;
 	justify-content: center;
@@ -699,6 +792,7 @@ button {
 	width: 120px;
 	height: 100px;
 }
+
 .texterandom {
 	flex-direction: row !important;
 	font-size: 50px;
@@ -712,21 +806,25 @@ button {
 	height: 7.5rem;
 	border-radius: 50%;
 }
+
 .stathtml {
 	justify-self: center;
 	width: 7.5rem;
 	height: 7.5rem;
 }
+
 .web {
 	width: auto;
 	height: 380px;
 	margin: 5px;
 }
+
 .web2 {
 	width: auto;
 	height: 290px;
 	margin: 5px;
 }
+
 .desstitre {
 	display: flex;
 	flex-direction: column;
@@ -734,6 +832,7 @@ button {
 	padding-left: 10px;
 	padding-right: 60px;
 }
+
 .desstitre2 {
 	display: flex;
 	flex-direction: column;
@@ -741,10 +840,12 @@ button {
 	padding-left: 10px;
 	padding-right: 60px;
 }
+
 .hide {
 	opacity: 0.0;
 	font-size: 0px;
 }
+
 .sm {
 	align-items: center;
 	display: flex;
@@ -759,13 +860,16 @@ button {
 	display: flex;
 	justify-content: center;
 }
+
 .social {
 	text-decoration: none;
 	color: $color_2;
+
 	&:hover {
 		color: var(--color-3);
 	}
 }
+
 .inlogo {
 	height: 15px;
 	width: auto;
@@ -790,6 +894,7 @@ button {
 	backdrop-filter: blur(0.3125rem);
 	-webkit-backdrop-filter: blur(0.3125rem);
 }
+
 #snackbar.show {
 	visibility: visible;
 	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;

@@ -312,6 +312,7 @@ main {
   /*Timeline*/
 }
 main div.main-division {
+  margin-left: 15px;
   padding: 1.25rem;
 }
 main div.rowcontainer {

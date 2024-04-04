@@ -102,7 +102,6 @@ body {
   border-radius: 0.3125rem;
   transition: box-shadow 0.3s;
   border: 0.0625rem solid rgba(255, 255, 255, 0.223);
-  z-index: 9999999;
   backdrop-filter: blur(0.3rem);
   -webkit-backdrop-filter: blur(0.3rem);
 }
@@ -139,7 +138,7 @@ header {
   position: fixed;
   margin: 0 auto;
   width: 75%;
-  height: 60px;
+  height: 70px;
   left: 0;
   right: 0;
   padding: 1.25rem;
@@ -210,7 +209,6 @@ header {
   padding: 16px;
   animation: rotate-animation 60s infinite linear;
 }
-
 #circle span {
   position: absolute;
   transform-origin: top left;
@@ -222,6 +220,62 @@ header {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/*Projets*/
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+:root {
+  --card-height: 400px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+.cardglow {
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  margin: 50px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgba(88, 199, 250, 0);
+  cursor: pointer;
+}
+.cardglow:after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 64);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(var(--rotate), #166840, #00BF63 43%, #b5cac0);
+  animation: spin 10s linear infinite;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.cardglow:hover:after {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
   }
 }
 /*Organisation de la page et disposition*/

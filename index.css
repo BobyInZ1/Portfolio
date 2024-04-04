@@ -1,5 +1,19 @@
 @charset "UTF-8";
 /*Variables*/
+::-moz-selection {
+  color: #fff;
+  background: var(--color-3);
+}
+::selection {
+  color: #fff;
+  background: var(--color-3);
+}
+
+::-moz-selection {
+  color: #fff;
+  background: var(--color-3);
+}
+
 :root {
   --color-one: #ffffff;
   --color-2: #ffffff;

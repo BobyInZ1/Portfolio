@@ -16,7 +16,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00BF63">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>Soan Morey - Projets</title>
+    <title>Soan Morey - Portfolio</title>
     <meta charset=" UTF-8">
     <link rel="stylesheet" href="index.css" />
     <script src="index.js"></script>
@@ -27,6 +27,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script>
+      $(function() {
+         $("#includeHeader").load("header.html");
+      });
+   </script>
 </head>
 
 <body>
@@ -36,7 +42,7 @@
         <div></div>
     </div>
     <div class="mainsep">
-        <script src='header.js'></script>
+        <div id="includeHeader"></div>
         <h2>Compétences</h2>
         <div class="main-division rowlist">
             <div class="progressblock progressblock1 effetverre">

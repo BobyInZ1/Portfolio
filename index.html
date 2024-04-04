@@ -27,13 +27,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script>
+      $(function() {
+         $("#includeHeader").load("header.html");
+      });
+   </script>
 </head>
 
 <body>
     <div class="fond">
     </div>
     <div class="mainsep">
-        <script src='header.js'></script>
+        <div id="includeHeader"></div>
         <main>
             <div class="main-division rowcontainer" id="division0">
                 <div class="text-présentation">

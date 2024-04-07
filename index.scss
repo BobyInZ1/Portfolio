@@ -15,6 +15,8 @@ $font-family_1: 'PT Sans Caption', sans-serif;
 	--color-one: #ffffff;
 	--color-2: #ffffff;
 	--color-3: #00BF63;
+	--card-height: 400px;
+	--card-width: calc(var(--card-height) / 1.5);
 }
 
 @font-face {
@@ -243,11 +245,6 @@ header {
 	inherits: false;
 }
 
-:root {
-	--card-height: 400px;
-	--card-width: calc(var(--card-height) / 1.5);
-}
-
 .cardglow {
 	width: var(--card-width);
 	height: var(--card-height);
@@ -262,6 +259,8 @@ header {
 	font-size: 1.5em;
 	color: rgb(88 199 250 / 0%);
 	cursor: pointer;
+	transform:scale(0.95);
+	transition: transform 1s;
 
 	&:after {
 		position: absolute;
@@ -276,9 +275,14 @@ header {
 		transform: scale(0.8);
 		filter: blur(calc(var(--card-height) / 6));
 		background-image: linear-gradient(var(--rotate), #166840, #00BF63 43%, #b5cac0);
-		animation: spin 10s linear infinite;
+		animation: spin 7s linear infinite;
 		opacity: 0;
 		transition: opacity 1s;
+	}
+
+	&:hover{
+		transform:scale(1.1);
+		transition: transform 1s;
 	}
 
 	&:hover:after{

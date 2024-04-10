@@ -18,8 +18,8 @@
   --color-one: #ffffff;
   --color-2: #ffffff;
   --color-3: #00BF63;
-  --card-height: 400px;
-  --card-width: calc(var(--card-height) / 1.5);
+  --card-height: 380px;
+  --card-width: 250px;
 }
 
 @font-face {
@@ -237,13 +237,12 @@ header {
 .cardglow {
   width: var(--card-width);
   height: var(--card-height);
-  padding: 3px;
+  padding: 20px;
   margin: 50px;
   position: relative;
   border-radius: 6px;
-  justify-content: center;
   display: flex;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: rgba(88, 199, 250, 0);
   cursor: pointer;
   transform: scale(1.1);
@@ -268,21 +267,51 @@ header {
 }
 .cardglow:hover {
   transform: scale(1.2);
-  transition: transform 1s;
-}
-.cardglow:hover:after {
-  opacity: 1;
-  transition: opacity 1s;
+  transition: transform 1s, color 1.5s, text-shadow 1.5s;
 }
 .cardglow:hover .projetgolmon {
   transform: scale(1.05);
   transition: transform 1s;
 }
+.cardglow:hover .cardtitle {
+  color: var(--color-one);
+  text-shadow: 0 0 20px var(--color-one);
+  transition: color 1.5s, text-shadow 1.5s;
+}
+.cardglow:hover:after {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.cardglow:hover #svgarrow {
+  stroke: #ffffff;
+  transition: stroke 1.5s;
+}
 
 .projetgolmon {
-  margin-top: 75px;
+  margin-top: 5px;
   color: #ffffff;
   transition: transform 1s;
+}
+
+.cardtitle {
+  color: var(--color-3);
+  text-shadow: 0 0 20px var(--color-3);
+  transition: color 1.5s, text-shadow 1.5s;
+}
+
+.carddesc {
+  padding-left: 7px;
+  margin-top: -20px;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.svgcontainer {
+  display: inline-block;
+}
+
+#svgarrow {
+  transition: stroke 1.5s;
 }
 
 @keyframes spin {

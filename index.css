@@ -85,6 +85,10 @@ br {
   text-shadow: 0 0 20px var(--color-3);
 }
 
+.glow {
+  text-shadow: 0 0 20px #ffffff;
+}
+
 h2 {
   margin-top: 70px;
   margin-left: 1.5625rem;
@@ -204,7 +208,7 @@ header {
 }
 
 #circle {
-  margin-left: 15px;
+  margin-left: -29px;
   margin-top: -50px;
   position: absolute;
   border-radius: 100%;
@@ -238,8 +242,6 @@ header {
   position: relative;
   border-radius: 6px;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   display: flex;
   font-size: 1.5em;
   color: rgba(88, 199, 250, 0);
@@ -271,6 +273,16 @@ header {
 .cardglow:hover:after {
   opacity: 1;
   transition: opacity 1s;
+}
+.cardglow:hover .projetgolmon {
+  transform: scale(1.05);
+  transition: transform 1s;
+}
+
+.projetgolmon {
+  margin-top: 75px;
+  color: #ffffff;
+  transition: transform 1s;
 }
 
 @keyframes spin {
@@ -323,169 +335,6 @@ main div.rowlist {
 main div.columncontainer {
   display: flex;
   flex-direction: column;
-}
-main div.text-article {
-  flex: 1 1 auto;
-  margin-top: -0.625rem;
-  display: flex;
-  flex-direction: row;
-}
-main div.text-article2 {
-  height: 100%;
-  flex: 1 1 auto;
-  margin-top: -0.625rem;
-  display: flex;
-  flex-direction: column;
-}
-main div.sized-div {
-  display: flex;
-  align-items: center;
-}
-main div.block {
-  display: block;
-  width: 6.25rem;
-  height: 6.25rem;
-  border-radius: 0.3125rem;
-  margin: 0.625rem;
-}
-main div.progressblock {
-  display: inline-block;
-  width: 8.4375rem;
-  height: 9.375rem;
-  border-radius: 0.625rem;
-  flex: 0 0 auto;
-  padding: 1.25rem;
-  margin: 0.625rem;
-  margin-bottom: 0.625rem;
-  overflow: hidden;
-  transition: 0.5s all ease-out;
-}
-main div.progressblock span.roundelem {
-  display: block;
-  position: relative;
-  width: 7.5rem;
-  height: 7.5rem;
-  flex: 0 1 auto;
-  margin: auto;
-}
-main div.progressblock span.roundelem1 {
-  display: block;
-  position: relative;
-  width: 7.5rem;
-  height: 7.5rem;
-  flex: 0 1 auto;
-  margin: auto;
-}
-main div.progressblock span.roundelem2 {
-  display: block;
-  position: relative;
-  width: 7.5rem;
-  height: 7.5rem;
-  flex: 0 1 auto;
-  margin: auto;
-}
-main div.progressblock span.roundelem3 {
-  display: block;
-  position: relative;
-  width: 7.5rem;
-  height: 7.5rem;
-  flex: 0 1 auto;
-  margin: auto;
-}
-main div.progressblock span.roundelem4 {
-  display: block;
-  position: relative;
-  width: 7.5rem;
-  height: 7.5rem;
-  flex: 0 1 auto;
-  margin: auto;
-}
-main div.progressblock span.roundelem5 {
-  display: block;
-  position: relative;
-  width: 7.5rem;
-  height: 7.5rem;
-  flex: 0 1 auto;
-  margin: auto;
-}
-main div.progressblock span.roundelem6 {
-  display: block;
-  position: relative;
-  width: 7.5rem;
-  height: 7.5rem;
-  flex: 0 1 auto;
-  margin: auto;
-}
-main div.progressblock p.progresstitle1 {
-  width: 100%;
-  margin-top: 0.5rem;
-  text-align: center;
-  font-weight: bold;
-}
-main div.progressblock p.progresstitle {
-  width: 100%;
-  text-align: center;
-  font-weight: bold;
-}
-main div.progressblock p.progressdescription {
-  margin: 0%;
-  opacity: 0;
-  line-height: 1.2;
-  font-size: 0.9rem;
-  transition: 0.5s all ease-out;
-}
-main div.progressblock:hover {
-  height: 15rem;
-  margin-bottom: 0.625rem;
-  transition: 0.5s all ease-out;
-}
-main div.progressblock:hover p.progressdescription {
-  margin-top: -0.3125rem;
-  margin: 0%;
-  line-height: 1.2;
-  opacity: 1;
-  transition: 0.5s all ease-out;
-}
-main div.progressblock1:hover {
-  height: 18.8rem;
-  margin-bottom: 0.625rem;
-  transition: 0.5s all ease-out;
-}
-main div.progressblock2:hover {
-  height: 17.5rem;
-  margin-bottom: 0.625rem;
-  transition: 0.5s all ease-out;
-}
-main div.progressblock3:hover {
-  height: 14.5rem;
-  margin-bottom: 0.625rem;
-  transition: 0.5s all ease-out;
-}
-main div.progressblock4:hover {
-  height: 22rem;
-  margin-bottom: 0.625rem;
-  transition: 0.5s all ease-out;
-}
-main div.difarticles {
-  margin-bottom: -80px;
-  scroll-behavior: auto !important;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: nowrap;
-  overflow: hidden;
-}
-main div.difarticles div.text-article {
-  scroll-behavior: auto !important;
-  flex: 0 0 auto;
-  width: 100%;
-  overflow: auto;
-}
-main div.difarticles div.text-article2 {
-  scroll-behavior: auto !important;
-  flex: 0 0 auto;
-  width: 100%;
-  overflow: auto;
 }
 main div.timeline-container {
   position: relative;
@@ -566,12 +415,6 @@ main div.timeline-right p {
 }
 main div.timeline-right p:before {
   left: -5.3125rem;
-}
-
-.titre {
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .iso {
@@ -698,9 +541,6 @@ button:hover {
   justify-content: center;
   line-height: 30px;
 }
-.footer a {
-  text-decoration: underline;
-}
 
 .sm {
   align-items: center;
@@ -712,11 +552,12 @@ button:hover {
 .social {
   text-decoration: none;
   color: var(--color-2);
-  transition: color 0.3s;
+  transition: color 1s, text-shadow 1s;
 }
 .social:hover {
+  transition: color 1s, text-shadow 1s;
   color: var(--color-3);
-  transition: color 0.3s;
+  text-shadow: 0 0 20px var(--color-3);
 }
 
 .inlogo {

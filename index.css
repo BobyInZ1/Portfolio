@@ -455,6 +455,12 @@ main div.timeline-right p:before {
   height: 400px;
 }
 
+.projetcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 /*Boutons*/
 a {
   text-decoration: none;

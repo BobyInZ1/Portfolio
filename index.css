@@ -266,6 +266,12 @@ header {
   background: linear-gradient(170deg, rgba(255, 255, 255, 0.171) 0%, rgba(255, 255, 255, 0) 126.32%);
   backdrop-filter: blur(0.4rem);
   -webkit-backdrop-filter: blur(0.4rem);
+  transition: transform 0.5s, text-shadow 0.5s;
+}
+.progressblock:hover {
+  text-shadow: 0 0 10px var(--color-2);
+  transform: scale(1.1);
+  transition: transform 0.5s, text-shadow 0.5s;
 }
 
 /*Projets*/

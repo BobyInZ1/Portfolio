@@ -19,6 +19,7 @@ $font-family_1: 'PT Sans Caption', sans-serif;
 	--card-width: 250px;
 }
 
+
 @font-face {
 	font-family: 'gatwick';
 	src: url('/font/gatwick-medium-webfont.woff') format('woff'),
@@ -242,6 +243,48 @@ header {
 	}
 }
 
+/*Compétences*/
+@keyframes compglide {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(calc(-250px * 11))
+	}
+}
+
+.bigbigcontainer {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	width:95%;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+.compcontainer {
+	animation: compglide 18s linear infinite;
+	display: flex;
+	width: calc(250px * 22);
+}
+
+.progressblock {
+	display: flex;
+	flex-direction: column;
+	margin: 25px;
+	width: 200px;
+	align-items: center;
+	justify-content: center;
+	padding-top: 1.25rem;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	border: 0.0625rem solid rgba(255, 255, 255, 0.144);
+	background: linear-gradient(170deg, rgba(255, 255, 255, 0.171) 0%, rgba(255, 255, 255, 0) 126.32%);
+	backdrop-filter: blur(0.4rem);
+	-webkit-backdrop-filter: blur(0.4rem);
+}
+
 /*Projets*/
 @property --rotate {
 	syntax: "<angle>";
@@ -301,7 +344,7 @@ header {
 			transition: opacity 1s;
 		}
 
-		& #svgarrow{
+		& #svgarrow {
 			stroke: #ffffff;
 			transition: stroke 1.5s;
 		}
@@ -324,16 +367,16 @@ header {
 	padding-left: 7px;
 	margin-top: -20px;
 	font-size: 12px;
-	font-weight:lighter;
+	font-weight: lighter;
 }
 
-.svgcontainer{
+.svgcontainer {
 	margin-top: 200px;
 	margin-left: 170px;
 	display: inline-block;
 }
 
-#svgarrow{
+#svgarrow {
 	transition: stroke 1.5s;
 }
 
@@ -495,7 +538,7 @@ main {
 	height: 400px;
 }
 
-.projetcontainer{
+.projetcontainer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
@@ -569,12 +612,21 @@ button {
 	width: 7.5rem;
 	height: 7.5rem;
 	border-radius: 50%;
+	margin-top:-15px;
+}
+
+.statblender {
+	justify-self: center;
+	width: 7.5rem;
+	height: auto;
+margin-top:-15px;
 }
 
 .stathtml {
 	justify-self: center;
 	width: 7.5rem;
 	height: 7.5rem;
+	margin-top:-15px;
 }
 
 .web {

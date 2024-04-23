@@ -41,4 +41,5 @@ document.addEventListener("DOMContentLoaded", function () {
         currentAngle += deltaAngle;
         circle.appendChild(span);
     });
-});
+
+    });

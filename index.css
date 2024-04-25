@@ -229,6 +229,16 @@ header {
   }
 }
 /*Compétences*/
+.bigbigcontainer {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  flex-direction: row;
+  overflow: hidden;
+  margin-bottom: -50px;
+}
+
 @keyframes compglide {
   0% {
     transform: translateX(0);
@@ -237,19 +247,44 @@ header {
     transform: translateX(-2750px);
   }
 }
-.bigbigcontainer {
+.compcontainer {
+  animation: compglide 20s linear infinite;
+  animation-play-state: running;
+  display: flex;
+  width: 5500px;
+}
+.compcontainer:hover {
+  animation-play-state: paused;
+  transition: animation-play-state 1s;
+}
+
+.bigbigcontainer2 {
   display: flex;
   margin-left: auto;
   margin-right: auto;
   width: 95%;
   flex-direction: row;
   overflow: hidden;
+  margin-bottom: 150px;
 }
 
-.compcontainer {
-  animation: compglide 18s linear infinite;
+@keyframes compglide2 {
+  0% {
+    transform: translateX(-2750px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.compcontainer2 {
+  animation: compglide2 20s linear infinite;
+  animation-play-state: running;
   display: flex;
   width: 5500px;
+}
+.compcontainer2:hover {
+  animation-play-state: paused;
+  transition: animation-play-state 1s;
 }
 
 .progressblock {

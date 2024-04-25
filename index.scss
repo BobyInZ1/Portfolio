@@ -282,12 +282,12 @@ header {
 	width: 95%;
 	flex-direction: row;
 	overflow: hidden;
-	margin-bottom: 150px;
+	margin-bottom: 125px;
 }
 
 @keyframes compglide2 {
 	0% {
-		transform: translateX(calc(-250px * 11))
+		transform: translateX(calc(-250px * 9))
 	}
 
 	100% {
@@ -299,11 +299,12 @@ header {
 	animation: compglide2 20s linear infinite;
 	animation-play-state: running;
 	display: flex;
-	width: calc(250px * 22);
+	width: calc(250px * 18);
 	&:hover{
 		animation-play-state: paused;
 		transition: animation-play-state 1s ;
 	}
+
 }
 
 .progressblock {
@@ -317,7 +318,7 @@ header {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
 	border: 0.0625rem solid rgba(255, 255, 255, 0.144);
-	background: linear-gradient(170deg, rgba(255, 255, 255, 0.171) 0%, rgba(255, 255, 255, 0) 126.32%);
+	background: linear-gradient(170deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0) 126.32%);
 	backdrop-filter: blur(0.4rem);
 	-webkit-backdrop-filter: blur(0.4rem);
 	transition: transform .5s, text-shadow .5s;

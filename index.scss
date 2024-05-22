@@ -341,7 +341,7 @@ header {
 	width: var(--card-width);
 	height: var(--card-height);
 	padding: 20px;
-	margin: 50px;
+	margin-bottom: 20px;
 	position: relative;
 	border-radius: 6px;
 	display: flex;
@@ -404,6 +404,7 @@ header {
 
 .cardtitle {
 	color: var(--color-3);
+	margin-top: 5px;
 	text-shadow: 0 0 20px var(--color-3);
 	transition: color 1.5s, text-shadow 1.5s;
 }
@@ -412,12 +413,19 @@ header {
 	padding-left: 7px;
 	margin-top: -20px;
 	font-size: 12px;
+	text-align: left;
 	font-weight: lighter;
 }
 
+.ekipimg{
+	width: 200px;
+	height: auto;
+	margin-left: 20px;
+}
+
 .svgcontainer {
-	margin-top: 200px;
 	margin-left: 170px;
+	margin-top: -20px;
 	display: inline-block;
 }
 
@@ -433,6 +441,29 @@ header {
 	100% {
 		--rotate: 360deg;
 	}
+}
+
+/*Projet en construction*/
+.projetape{
+	justify-content: space-evenly !important;
+	text-align: center !important;
+}
+
+.projetape > .projetgolmon{
+	margin-top: 5px;
+	color: #ffffff;
+	transition: transform 1s;
+}
+
+.cardtape{
+margin-left: -20px;
+width: 290px;
+}
+
+.projetwork > .svgcontainer {
+	margin-left: 190px !important;
+	margin-top: -20px;
+	display: inline-block;
 }
 
 /*Organisation de la page et disposition*/
@@ -584,9 +615,20 @@ main {
 }
 
 .projetcontainer {
+	margin-top: 25px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	padding: 40px;
+	flex-wrap: wrap;
+	gap: 100px;
+}
+
+/*Tags*/
+.tagcontainer{
+	display: flex;
+	flex-direction: row;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 /*Boutons*/

@@ -214,14 +214,16 @@ header {
 
 .moi {
 	z-index: 0;
+	height: 350px;
 	width: auto;
+	border-radius: 100%;
 	-webkit-transform: scaleX(-1);
 	transform: scaleX(-1);
 }
 
 #circle {
-	margin-left: -29px;
-	margin-top: -50px;
+	margin-left: -42px;
+	margin-top: -40px;
 	position: absolute;
 	border-radius: 100%;
 	padding: 16px;

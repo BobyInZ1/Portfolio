@@ -514,6 +514,12 @@ main {
 		flex-direction: column;
 	}
 
+	.ekipcontainer{
+		margin-top: 10px;
+		margin-bottom: -30px;
+		display: flex;
+		justify-content:center;
+	}
 
 	/*Timeline*/
 	div.timeline-container {
@@ -642,7 +648,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	margin-left: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 }
 .tagcontainer{
 	display: flex;

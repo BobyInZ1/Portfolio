@@ -481,6 +481,12 @@ main div.columncontainer {
   display: flex;
   flex-direction: column;
 }
+main .ekipcontainer {
+  margin-top: 10px;
+  margin-bottom: -30px;
+  display: flex;
+  justify-content: center;
+}
 main div.timeline-container {
   position: relative;
   width: 100%;
@@ -595,7 +601,7 @@ main div.timeline-right p:before {
   display: flex;
   flex-direction: column;
   margin-left: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .tagcontainer {

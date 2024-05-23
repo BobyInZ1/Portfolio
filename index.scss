@@ -631,6 +631,12 @@ main {
 	align-items: center;
 }
 
+.fix{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
 /*Tags*/
 .tagcontainer{
 	display: flex;

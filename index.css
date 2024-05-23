@@ -578,6 +578,12 @@ main div.timeline-right p:before {
   gap: 100px;
 }
 
+.videocontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /*Tags*/
 .tagcontainer {
   display: flex;
@@ -645,6 +651,17 @@ button:hover {
   flex-direction: row !important;
   font-size: 50px;
   padding-right: 0.6rem;
+}
+
+.redac {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.clear {
+  clear: both;
 }
 
 /*Section de compétences et de projets*/

@@ -638,13 +638,38 @@ main {
 }
 
 /*Tags*/
+.tagcontainercontainer{
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;
+	margin-bottom: 50px;
+}
 .tagcontainer{
 	display: flex;
 	flex-direction: row;
-	margin-top: 0;
-	margin-bottom: 0;
+	flex-wrap: wrap;
+	margin-top: 10px;
 }
 
+
+.tag{
+	display: flex;
+	margin-left: 5px;
+	margin-top: -3px ;
+	padding: 5px;
+	border-radius: 15px;
+
+	& > img{
+		height:20px;
+		width: auto;
+		margin-right: 5px;
+		
+	}
+}
+
+.ae{
+	border-radius: 50%;
+}
 /*Boutons*/
 a {
 	text-decoration: none;

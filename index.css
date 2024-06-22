@@ -451,10 +451,15 @@ header {
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .wip {
   position: absolute;
+  z-index: 1;
   left: 50%;
   margin-top: 200px;
   transform: translateX(-50%);

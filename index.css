@@ -668,6 +668,10 @@ a {
   color: var(--color-2);
 }
 
+.udl {
+  text-decoration: underline !important;
+}
+
 button {
   transition: color 0.3s;
   display: flex;

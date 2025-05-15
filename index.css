@@ -76,6 +76,10 @@ br {
   font-weight: bold;
 }
 
+.big {
+  font-size: 1.2em;
+}
+
 .vert {
   color: var(--color-3);
 }
@@ -231,29 +235,42 @@ header {
   }
 }
 /*Compétences*/
-.bigbigcontainer {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 95%;
-  flex-direction: row;
-  overflow: hidden;
-  margin-bottom: -50px;
-}
-
 @keyframes compglide {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-2750px);
+    transform: translateX(-100%);
   }
 }
+@keyframes compglide2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.comptitle {
+  margin-top: 10px;
+}
+
+.bigbigcontainer {
+  display: flex;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  overflow: hidden;
+}
+
 .compcontainer {
+  margin-top: 10px;
+  margin-bottom: 10px;
   animation: compglide 20s linear infinite;
   animation-play-state: running;
   display: flex;
-  width: 5500px;
+  width: 100%;
 }
 .compcontainer:hover {
   animation-play-state: paused;
@@ -262,53 +279,71 @@ header {
 
 .bigbigcontainer2 {
   display: flex;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
-  width: 95%;
   flex-direction: row;
   overflow: hidden;
-  margin-bottom: 125px;
 }
 
-@keyframes compglide2 {
-  0% {
-    transform: translateX(-2250px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 .compcontainer2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
   animation: compglide2 20s linear infinite;
   animation-play-state: running;
   display: flex;
-  width: 5000px;
+  width: 100%;
 }
 .compcontainer2:hover {
   animation-play-state: paused;
   transition: animation-play-state 1s;
 }
 
-.progressblock {
+/*Tags*/
+.tag {
   display: flex;
-  flex-direction: column;
-  margin: 25px;
-  width: 200px;
-  align-items: center;
-  justify-content: center;
-  padding-top: 1.25rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  border: 0.0625rem solid rgba(255, 255, 255, 0.144);
-  background: linear-gradient(170deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0) 126.32%);
+  white-space: nowrap;
+  height: 20px;
+  width: 100%;
+  margin-left: 5px;
+  margin-top: -3px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
   backdrop-filter: blur(0.4rem);
   -webkit-backdrop-filter: blur(0.4rem);
-  transition: transform 0.5s, text-shadow 0.5s;
+  transition: margin-left 0.5s, margin-right 0.5s, transform 0.5s, text-shadow 0.5s;
 }
-.progressblock:hover {
+.tag:hover {
   text-shadow: 0 0 10px var(--color-2);
   transform: scale(1.1);
-  transition: transform 0.5s, text-shadow 0.5s;
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: margin-left 0.5s, margin-right 0.5s, transform 0.5s, text-shadow 0.5s;
+}
+.tag > img {
+  height: 20px;
+  width: auto;
+  margin-right: 5px;
+}
+
+.ae {
+  border-radius: 50%;
+}
+
+.tagcontainercontainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.tagcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 /*Projets*/
@@ -628,38 +663,6 @@ main div.timeline-right p:before {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-}
-
-/*Tags*/
-.tagcontainercontainer {
-  display: flex;
-  flex-direction: column;
-  margin-left: 50px;
-  margin-bottom: 10px;
-}
-
-.tagcontainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-.tag {
-  display: flex;
-  margin-left: 5px;
-  margin-top: -3px;
-  padding: 5px;
-  border-radius: 15px;
-}
-.tag > img {
-  height: 20px;
-  width: auto;
-  margin-right: 5px;
-}
-
-.ae {
-  border-radius: 50%;
 }
 
 /*Boutons*/

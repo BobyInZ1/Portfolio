@@ -15,6 +15,7 @@ $font-family_1: 'PT Sans Caption', sans-serif;
 	--color-one: #ffffff;
 	--color-2: #ffffff;
 	--color-3: #00BF63;
+	--red: #ff2929;
 	--card-height: 380px;
 	--card-width: 250px;
 }
@@ -83,7 +84,7 @@ br {
 	font-weight: bold;
 }
 
-.big{
+.big {
 	font-size: 1.2em;
 }
 
@@ -94,6 +95,15 @@ br {
 .vertglow {
 	color: var(--color-3);
 	text-shadow: 0 0 20px var(--color-3);
+}
+
+.rouge {
+	color: var(--red);
+}
+
+.rougeglow {
+	color: var(--red);
+	text-shadow: 0 0 20px var(--red);
 }
 
 .glow {
@@ -270,7 +280,7 @@ header {
 	}
 }
 
-.comptitle{
+.comptitle {
 	margin-top: 10px;
 }
 
@@ -359,19 +369,165 @@ header {
 	border-radius: 50%;
 }
 
-.tagcontainercontainer {
-	display: flex;
-	flex-direction: column;
-	margin-left: 50px;
-	margin-bottom: 10px;
-}
-
 .tagcontainer {
+	margin-top: 10px;
+	margin-bottom: 10px;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-	margin-top: 10px;
+	width: fit-content;
 }
+
+.bigcontainer {
+	margin-top: 10px;
+	display: flex;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+/*Alternance - bouton*/
+.buttonpulse {
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	transition: color .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	text-decoration: none;
+	background: linear-gradient(to bottom right, var(--color-3), rgb(0, 166, 86)6);
+	transition: background-color .5s, box-shadow .5s, text-shadow .5s;
+	border: none;
+	border-radius: 40px;
+	cursor: pointer;
+	font-size: 18px;
+	height: auto;
+	width: 200px;
+	padding: 5px;
+	color: var(--color-2);
+	cursor: pointer;
+	-webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+	-moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+	-ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+	animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.um-cta {
+	background-color:#00ff84a1;
+	box-shadow: 0 0 0 0 rgb(24, 236, 126);
+	border: medium none;
+	border-radius: 5px;
+	border-radius: 99px;
+}
+
+@-webkit-keyframes pulse {
+	to {
+		box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);
+	}
+}
+
+@-moz-keyframes pulse {
+	to {
+		box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);
+	}
+}
+
+@-ms-keyframes pulse {
+	to {
+		box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);
+	}
+}
+
+@keyframes pulse {
+	to {
+		box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);
+	}
+}
+
+/*Alternance - Carte*/
+.alternancecontainer {
+	margin-top: 25px;
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	height: fit-content;
+	align-items: center;
+	justify-content: center;
+}	
+
+@property --rotate {
+	syntax: "<angle>";
+	initial-value: 132deg;
+	inherits: false;
+}
+
+.cardpfm {
+	width: auto;
+	height:300px;
+	padding: 20px;
+	margin-top: 20px;
+	position: relative;
+	border-radius: 6px;
+	display: flex;
+	font-size: 1.4em;
+	color: rgb(88 199 250 / 0%);
+	cursor: pointer;
+	transform: scale(0.9);
+	transition: transform 1s;
+
+	&:after {
+		position: absolute;
+		content: "";
+		top: calc(var(--card-height) / 64);
+		left: 0;
+		right: 0;
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+		margin: 0 auto;
+		transform: scale(1);
+		filter: blur(calc(var(--card-height) / 6));
+		background-image: linear-gradient(var(--rotate), #cb2b2b, #00BF63 43%, #b5cac0);
+		animation: spin 7s linear infinite;
+		opacity: 0;
+		transition: opacity 1s;
+	}
+
+	&:hover {
+		transform: scale(1);
+		transition: transform 1s, color 1.5s, text-shadow 1.5s;
+
+		& .projetgolmon {
+			transform: scale(1.05);
+			transition: transform 1s;
+		}
+
+		& .cardtitle {
+			color: var(--color-one);
+			text-shadow: 0 0 20px var(--color-one);
+			transition: color 1.5s, text-shadow 1.5s;
+		}
+
+		&:after {
+			opacity: 1;
+			transition: opacity 1s;
+		}
+	}
+}
+
+@keyframes spin {
+	0% {
+		--rotate: 0deg;
+	}
+
+	100% {
+		--rotate: 360deg;
+	}
+}
+
 
 /*Projets*/
 @property --rotate {
@@ -624,7 +780,7 @@ main {
 		position: relative;
 		display: block;
 		width: 100%;
-		padding-bottom: 200px;
+		padding-bottom: 225px;
 
 		p {
 			width: calc(50% - 6.25rem);

@@ -410,6 +410,12 @@ header {
   justify-content: center;
 }
 
+.alternancegolmon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
@@ -423,6 +429,7 @@ header {
   position: relative;
   border-radius: 6px;
   display: flex;
+  justify-content: center;
   font-size: 1.4em;
   color: rgba(88, 199, 250, 0);
   cursor: pointer;
@@ -444,24 +451,41 @@ header {
   background-image: linear-gradient(var(--rotate), #cb2b2b, #00BF63 43%, #b5cac0);
   animation: spin 7s linear infinite;
   opacity: 0;
-  transition: opacity 1s;
+  transition: transform 1s, opacity 1s;
 }
 .cardpfm:hover {
   transform: scale(1);
   transition: transform 1s, color 1.5s, text-shadow 1.5s;
 }
-.cardpfm:hover .projetgolmon {
+.cardpfm:hover .alternancegolmon {
   transform: scale(1.05);
   transition: transform 1s;
 }
-.cardpfm:hover .cardtitle {
+.cardpfm:hover .pfmtitle {
   color: var(--color-one);
   text-shadow: 0 0 20px var(--color-one);
-  transition: color 1.5s, text-shadow 1.5s;
+  transition: transform 1s, color 1.5s, text-shadow 1.5s;
 }
 .cardpfm:hover:after {
   opacity: 1;
-  transition: opacity 1s;
+  transition: transform 1s, opacity 1s;
+}
+
+.pfmtitle {
+  color: var(--color-3);
+  font-size: 40px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 20px var(--color-3);
+  transition: transform 1s, color 1.5s, text-shadow 1.5s;
+}
+
+.pfmdesc {
+  padding-left: 7px;
+  margin-top: -20px;
+  font-size: 16px;
+  text-align: left;
+  font-weight: lighter;
 }
 
 @keyframes spin {

@@ -657,7 +657,7 @@ header {
   position: absolute;
   z-index: 1;
   left: 50%;
-  margin-top: 200px;
+  margin-top: 300px;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
@@ -668,7 +668,65 @@ header {
   margin-bottom: 260px;
 }
 
-/*Organisation de la page et disposition*/
+.whippin {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  margin-top: 500px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 30px;
+}
+.whippin > h1 {
+  margin-bottom: 260px;
+}
+
+/*Pages de Projet*/
+.redac {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.videocontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video {
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.fix {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.cesacom {
+  margin-bottom: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.bonuscesacom {
+  margin-bottom: 50px;
+}
+
+.clear {
+  clear: both;
+}
+
 .outils {
   display: flex;
   flex-direction: column;
@@ -677,6 +735,7 @@ header {
   font-size: medium;
 }
 
+/*Organisation de la page et disposition*/
 .mainsep {
   position: fixed;
   top: 0;
@@ -822,18 +881,6 @@ main div.timeline-right p:before {
   gap: 100px;
 }
 
-.videocontainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.fix {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
 /*Boutons*/
 a {
   text-decoration: none;
@@ -897,17 +944,6 @@ button:hover {
   flex-direction: row !important;
   font-size: 50px;
   padding-right: 0.6rem;
-}
-
-.redac {
-  margin-top: 20px;
-  margin-left: 50px;
-  margin-bottom: 0;
-  font-size: 20px;
-}
-
-.clear {
-  clear: both;
 }
 
 /*Section de compétences et de projets*/

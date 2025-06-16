@@ -68,11 +68,12 @@
   color: var(--color-3);
 }
 
+/*
 br {
-  content: "";
-  margin-bottom: 1em;
+	content: "";
+	margin-bottom: 1em;
 }
-
+	*/
 .gras {
   font-weight: bold;
 }

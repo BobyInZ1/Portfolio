@@ -842,6 +842,12 @@ li:last-child {
   font-size: medium;
 }
 
+.audio {
+  vertical-align: center;
+  margin: 15px;
+  padding-bottom: 25px;
+}
+
 /*Organisation de la page et disposition*/
 .mainsep {
   position: fixed;
@@ -889,7 +895,7 @@ main .ekipcontainer {
   margin-top: 10px;
   margin-bottom: -30px;
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
 }
 main div.timeline-container {
   position: relative;

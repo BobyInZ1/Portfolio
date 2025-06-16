@@ -926,6 +926,12 @@ li {
 	font-size: medium;
 }
 
+.audio {
+    vertical-align: center;
+    margin: 15px;
+	padding-bottom: 25px;
+}
+
 /*Organisation de la page et disposition*/
 
 .mainsep {
@@ -977,7 +983,7 @@ main {
 		margin-top: 10px;
 		margin-bottom: -30px;
 		display: flex;
-		justify-content: center;
+		justify-content: center !important;
 	}
 
 	/*Timeline*/
